@@ -80,3 +80,21 @@ bootstrap()
 2. Easier to maintain and expand. If the shape of the data changes, it is easy to make the necessary changes within the pipe only.
 3. Responsibility of identifying the arguments to process is shifted to one central file - the pipe file.
 4. Promote usage of DTOs.
+
+## Object Relational Mapping (ORM)
+* ORM is a technique that let us query and manipulate the data, using object-oritented paradigm.
+* There are many ORM libraries that let the developer to communicate to the database using their preferred language - rather than sending the plain query. 
+  * Pros
+    * writing the data model in one place - easier to maintain
+    * Lots of things done automatically - database handling, data types, relation etc..
+    * No need to write SQL syntax
+    * Database abstraction - You can change the database type whenever you wish.
+    * Leverage OOP - Inheritance is easy to achieve
+  * Cons
+    * Performance is alright but easy to neglect
+    * Makes it easy to forget what is happening behind the scene.
+
+## TypeORM
+* Javascript library that can run in NodeJS and be used with Typescript (or JS)
+
+
