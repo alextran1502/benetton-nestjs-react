@@ -14,7 +14,6 @@ export class TaskRepository extends Repository<Task> {
         // Using query builder
         const query = this.createQueryBuilder('task'); // Refering to the task entity
 
-        console.log(status)
         if (status) {
             query.andWhere('task.status = :status', { status })
         }
