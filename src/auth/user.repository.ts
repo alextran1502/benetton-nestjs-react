@@ -14,7 +14,7 @@ export class UserRepository extends Repository<User> {
         query.andWhere('user.username = :username', { username })
 
         const user: User = await query.getOne()
-        
+
         bcrypt.compare(password, user.password).then(result => {
             console.log(result)
         })
@@ -43,7 +43,7 @@ export class UserRepository extends Repository<User> {
 
     async validateUserPassword(authCredentialDto: AuthCredentialDto): Promise<string> {
         const { username, password } = authCredentialDto;
-        const user: User = await this.findOne({username});
+        const user: User = await this.findOne({ username });
 
         if (user && await user.validatePassword(password)) {
             return user.username;
